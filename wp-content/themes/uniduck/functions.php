@@ -2,6 +2,20 @@
 
 add_theme_support( 'post-thumbnails' );
 
+// Blog Post Page top widget with title & search bar
+function wpt_create_widget( $name, $id, $description ) {
+
+	register_sidebar(array(
+		'name' => __( $name ),	 
+		'id' => $id, 
+		'description' => __( $description ),
+		'before_widget' => '<div class="widget">',
+		'after_widget' => '</div>'
+	));
+
+}
+wpt_create_widget( 'Blog Page Sidebar', 'blog', 'Displays on the top of the Blog Post Page' );
+
 // Show Latest Post Shortcode
 function latest_post() {
     $args = array(
