@@ -18,31 +18,22 @@
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 
             <!-- Blog Post Item -->
-            <div class="col-4 post-item">
-                <div class="image">
-                    <img class="adapt-img" src="Assets/Images/img-unicorn2.png" alt="Uniduck | " />
-                </div>
-                <div class="post-text">
-                    <span class="date">November 4, 2016</span>
-                    <h3 class="last-post-title">The Unicorn were voted "Consistently Excellent" Pub of the Year</h3>
-                    <div class="tags">
-                        <span class="tag">Unicorn</span>
-                        <span class="tag">Pinky</span>
-                        <span class="tag">Magic</span>
-                        <span class="tag">Love</span>
-                    </div>
-                    <p class="blog-post-excerpt">
-                        Once upon a time in kingdom far-far-away in the lands of the never-ending 
-                        spring, a king sat in his golden throne and ruled his kingdom in perfect harmony.
-                        A person can...
-                        <a href="#" class="read-more-btn">Read more</a>
-                    </p>
-                    <div class="post-engagement flex">
-                        <p class="likes"><img src="Assets/Icons/ic-heart.svg" /><span>17 faves</span></p>
-                        <p class="comments"><img src="Assets/Icons/ic-comment.svg" /><span>22 comments</span></p>
-                    </div>
-                </div>
-            </div>
+			<div class="col-4 post-item">
+				<div class="image">
+					<?php the_post_thumbnail(); ?>
+				</div>
+				<div class="post-text">
+					<span class="date"><?php the_date(); ?></span>
+					<a href="<?php the_permalink(); ?>"><h3 class="last-post-title"><?php the_title(); ?></h3></a>
+					<?php the_tags( '<ul class="tags"><li class="tag">', '</li><li class="tag">', '</li></ul>' ); ?>
+					
+					<p><?php echo wpuni_excerpt(32); ?></p>
+					<div class="post-engagement flex">
+						<p class="likes"><img src="<?php bloginfo('template_url'); ?>/Assets/Icons/ic-heart.svg" /><span>17 faves</span></p>
+						<p class="comments"><img src="<?php bloginfo('template_url'); ?>/Assets/Icons/ic-comment.svg" /><span>22 comments</span></p>
+					</div>
+				</div>
+			</div>
 
         <?php endwhile; else : ?>
             <p><?php esc_html_e( 'Sorry, no pages found.' ); ?></p>
