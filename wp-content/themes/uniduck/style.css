@@ -66,6 +66,12 @@ h3 {
     line-height: 1.4;
 }
 
+h4 {
+    font-family: 'MuseoSans 500', sans-serif;
+    color: #dc4ba3;
+    text-align: center;
+}
+
 p {
     font-size: 20px;
     margin: 0;
@@ -225,7 +231,7 @@ footer .right a {
     text-align: center;
     margin: 0 auto;
     border: 0;
-    background: transparent url(Assets/Icons/ic-search.svg) no-repeat 285px center;
+    background: transparent url(Assets/Icons/ic-search.svg) no-repeat 270px center;
     background-size: 16px;
     padding: 15px;
     border-radius: 0;
@@ -458,4 +464,25 @@ footer .right a {
 .wp-block-image figcaption {
     text-align: center;
     color: #aaa;
+}
+
+.related-post .post-item {
+    padding-top: 40px;
+    display: flex;
+    padding: 40px 283px;
+}
+
+.related-post .post-text {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.related-post .post-item .image img {
+    width: 100%;
+    height: auto;
+}
+
+.related-post .read-more {
+    display: block;
+    padding-top: 20px;
 }
