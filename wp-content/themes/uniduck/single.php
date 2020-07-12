@@ -5,7 +5,7 @@
         <!-- Hero Section -->
         <section class="hero-section">
             <div class="container">
-                <?php the_post_thumbnail(); ?>
+                <?php the_post_thumbnail('full'); ?>
             </div>
             <div class="hero-overlay">
                 <h1 class="text-white text-center"><?php the_title(); ?></h1>
@@ -18,12 +18,13 @@
         </section>
 
         <!-- Blog Post Page Content -->
-        <section class="container section-padding">
+        <section class="container section-padding blog-post-content flex">
             <?php the_content(); ?>
+            <?php the_tags( '<ul class="tags"><li class="tag">', '</li><li class="tag">', '</li></ul>' ); ?>
         </section>
 
-        <!-- Related Posts Section -->
-        <section class="container related-post section-padding">
+        <section class="container related-post">
+
             <h4>More Magic</h4>
             <?php
                 $tags = wp_get_post_tags($post->ID);
@@ -41,10 +42,10 @@
                     if( $my_query->have_posts() ) {
                     while ($my_query->have_posts()) : $my_query->the_post(); ?>
                         <div class="post-item">
-                            <div class="image">
+                            <div class="image col-6 pl-0">
                                 <?php the_post_thumbnail(); ?>
                             </div>
-                            <div class="post-text">
+                            <div class="post-text col-6 pr-0">
                                 <a href="<?php the_permalink(); ?>"><h3 class="last-post-title"><?php the_title(); ?></h3></a>                                
                                 <p><?php echo wpuni_excerpt(11); ?></p>
                             </div>
