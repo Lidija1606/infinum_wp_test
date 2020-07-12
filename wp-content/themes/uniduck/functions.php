@@ -12,7 +12,7 @@ function latest_post() {
             <?php the_post_thumbnail(); ?>
 		</div>
 		<div class="right col-6 pr-0">
-			<span class="date"><?php the_date(); ?></span>
+			<span class="date"><?php the_time('F j, Y'); ?></span>
 			<a href="<?php the_permalink(); ?>"><h2 class="last-post-title"><?php the_title(); ?></h2></a>
 			<?php the_tags( '<ul class="tags"><li class="tag">', '</li><li class="tag">', '</li></ul>' ); ?>
 			<p><?php echo wpuni_excerpt(40); ?></p>

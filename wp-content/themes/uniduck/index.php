@@ -26,7 +26,7 @@
 					<?php the_post_thumbnail(); ?>
 				</div>
 				<div class="post-text">
-					<span class="date"><?php the_date(); ?></span>
+					<span class="date"><?php the_time('F j, Y'); ?></span>
 					<a href="<?php the_permalink(); ?>"><h3 class="last-post-title"><?php the_title(); ?></h3></a>
 					<?php the_tags( '<ul class="tags"><li class="tag">', '</li><li class="tag">', '</li></ul>' ); ?>
 					
