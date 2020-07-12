@@ -25,10 +25,10 @@ function latest_post() {
     $query = new WP_Query($args);
 
     if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>  
-        <div class="left col-6 pl-0">
+        <div class="left col-12 col-md pl-md-0">
             <?php the_post_thumbnail(); ?>
 		</div>
-		<div class="right col-6 pr-0">
+		<div class="right col-12 col-md pr-md-0">
 			<span class="date"><?php the_time('F j, Y'); ?></span>
 			<a href="<?php the_permalink(); ?>"><h2 class="last-post-title"><?php the_title(); ?></h2></a>
 			<?php the_tags( '<ul class="tags"><li class="tag">', '</li><li class="tag">', '</li></ul>' ); ?>
