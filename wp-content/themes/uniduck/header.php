@@ -12,7 +12,7 @@
         <header>
             <div class="container">
                 <nav class="navbar navbar-expand-lg">
-                    <a class="navbar-brand" href="/">
+                    <a class="navbar-brand" href="<?php echo home_url('/'); ?>">
                         <img src="<?php bloginfo('template_url'); ?>/Assets/Images/logo.png" alt="Uniduck | The Unicorn & a Duck Logo" />
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

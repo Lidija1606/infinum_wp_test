@@ -14,7 +14,7 @@
                     <span class="text-white"><?php echo get_the_author_meta('nickname'); ?></span>
                 </p>
             </div>
-            <a href="/" class="back-btn text-white">Back to blog</a>
+            <a href="<?php echo home_url('/'); ?>" class="back-btn text-white">Back to blog</a>
         </section>
 
         <!-- Blog Post Page Content -->
