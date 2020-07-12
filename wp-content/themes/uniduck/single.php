@@ -42,10 +42,10 @@
                     if( $my_query->have_posts() ) {
                     while ($my_query->have_posts()) : $my_query->the_post(); ?>
                         <div class="post-item">
-                            <div class="image col-6 pl-0">
+                            <div class="image col-12 col-sm-6 pl-sm-0">
                                 <?php the_post_thumbnail(); ?>
                             </div>
-                            <div class="post-text col-6 pr-0">
+                            <div class="post-text col-12 col-sm-6 pr-sm-0">
                                 <a href="<?php the_permalink(); ?>"><h3 class="last-post-title"><?php the_title(); ?></h3></a>                                
                                 <p><?php echo wpuni_excerpt(11); ?></p>
                             </div>
