@@ -3,7 +3,7 @@
     <!-- Page Title Section -->
     <section class="title-section container section-padding">
         <h1 class="text-center"><?php wp_title(''); ?> Blog Posts</h1>
-        <input id="search" class="form-control" type="search" placeholder="Search blog" aria-label="Search">
+        <?php get_sidebar( 'blog' ); ?>
     </section>
 
     <!-- Other Blog Posts Section -->
