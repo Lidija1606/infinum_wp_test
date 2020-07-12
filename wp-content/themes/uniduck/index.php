@@ -1,10 +1,9 @@
 <?php get_header(); ?>
 
-    <!-- Page Title Section -->
-    <section class="title-section container section-padding">
-        <h1 class="text-center">The Unicorn & a Duck</h1>
-        <input id="search" class="form-control" type="search" placeholder="Search blog" aria-label="Search">
-    </section>
+	<!-- Page Title Section -->
+	<section class="title-section container section-padding">
+		<?php get_sidebar( 'blog' ); ?>
+	</section>
 
     <!-- Last Blog Post Section -->
     <section class="last-blog-post flex container section-padding">
