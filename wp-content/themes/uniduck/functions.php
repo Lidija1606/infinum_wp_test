@@ -1,6 +1,7 @@
 <?php
 
 add_theme_support( 'post-thumbnails' );
+add_theme_support('html5',array('search-form'));
 
 // Blog Post Page top widget with title & search bar
 function wpt_create_widget( $name, $id, $description ) {
