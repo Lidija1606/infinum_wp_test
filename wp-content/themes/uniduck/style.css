@@ -235,7 +235,7 @@ footer .right a {
 .form-control:focus {
     outline: 0;
     box-shadow: none;
-    border-bottom: 1px solid #909090;
+    border-bottom: 1px solid #dc4ba3;
     background-position: 15px center;
     transition: all .3s;
 }
@@ -368,4 +368,79 @@ footer .right a {
 .back-btn:hover {
     color: #dc4ba3;
     transition: all .3s;
+}
+
+.blog-post-content {
+    flex-direction: column;
+    align-items: center;
+}
+
+.blog-post-content p,
+.blog-post-content h3 {
+    margin-bottom: 20px;
+    padding: 0 283px;
+    width: 100%;
+}
+
+.blog-post-content h3 {
+    margin-top: 30px;
+}
+
+.blog-post-content .tags {
+    width: 100%;
+    padding: 10px 283px;
+}
+
+.wp-block-group {
+    width: 100%;
+}
+
+.wp-block-group.left-quotes {
+    padding-left: 283px;
+}
+
+.wp-block-group.right-quotes {
+    padding-right: 283px;
+}
+
+.wp-block-group .wp-block-group__inner-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wp-block-group p {
+    padding-right: 0;
+    padding-left: 0;
+    width: 355px;
+}
+
+.wp-block-group .quote {
+    color: #dc4ba3;
+    font-size: 28px;
+    width: 430px;
+    text-align: center;
+    align-self: center;
+}
+
+.wp-block-embed {
+    width: 100%;
+    height: 530px;
+    margin-bottom: 50px;
+}
+
+.wp-block-embed,
+.wp-block-image {
+    margin-top: 30px;
+}
+
+.wp-block-embed iframe,
+.wp-block-embed__wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.wp-block-embed figcaption,
+.wp-block-image figcaption {
+    text-align: center;
+    color: #aaa;
 }
