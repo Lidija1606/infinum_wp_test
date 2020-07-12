@@ -80,11 +80,6 @@ span {
     font-size: 16px;
 }
 
-.form-control:focus {
-    outline: 0;
-    box-shadow: none;
-}
-
 .container {
     padding: 0;
 }
@@ -225,14 +220,28 @@ footer .right a {
 }
 
 /******* Title Section Style *******/
-#search {
-    width: auto;
+.form-control {
+    width: 60%;
     text-align: center;
     margin: 0 auto;
     border: 0;
-    background: transparent url(Assets/Icons/ic-search.svg) no-repeat 7px center;
+    background: transparent url(Assets/Icons/ic-search.svg) no-repeat 285px center;
     background-size: 16px;
-    padding: 15px 0;
+    padding: 15px;
+    border-radius: 0;
+    transition: all .3s;
+}
+
+.form-control:focus {
+    outline: 0;
+    box-shadow: none;
+    border-bottom: 1px solid #909090;
+    background-position: 15px center;
+    transition: all .3s;
+}
+
+.form-control:focus::placeholder {
+    color: transparent;
 }
 
 /******* Last Blog Section Style *******/
