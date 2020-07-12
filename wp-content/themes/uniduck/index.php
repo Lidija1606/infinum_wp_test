@@ -2,6 +2,7 @@
 
 	<!-- Page Title Section -->
 	<section class="title-section container section-padding">
+		<h1 class="text-center">The Unicorn & a Duck</h1>
 		<?php get_sidebar( 'blog' ); ?>
 	</section>
 
