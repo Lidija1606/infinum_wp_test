@@ -1,5 +1,7 @@
 <?php
 
+add_theme_support( 'post-thumbnails' );
+
 // Show Latest Post Shortcode
 function latest_post() {
     $args = array(
