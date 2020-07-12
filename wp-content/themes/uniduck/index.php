@@ -15,7 +15,10 @@
 	<section class="other-blog-posts container section-padding">
 		<div class="row">
 
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
+        <?php 
+			query_posts('posts_per_page=6&offset=1');
+			if ( have_posts() ) : while ( have_posts() ) : the_post();
+		?>
 
             <!-- Blog Post Item -->
 			<div class="col-4 post-item">
