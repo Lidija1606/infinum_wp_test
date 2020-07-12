@@ -72,6 +72,9 @@ function wpuni_theme_js() {
     // Bootstrap JS
     wp_enqueue_script( 'bootstrap_js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js', array('jquery'), '', true );
 
+    // Main JS
+    wp_enqueue_script( 'main_js', get_template_directory_uri() . '/js/main.js', array('jquery'), '', true );
+
 }
 add_action( 'wp_enqueue_scripts', 'wpuni_theme_js' );
 
