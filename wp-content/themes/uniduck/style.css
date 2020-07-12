@@ -12,3 +12,351 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
+/******* General Style *******/
+* {
+    box-sizing: border-box;
+    font-family: 'MuseoSans 300', sans-serif;
+}
+
+@font-face {
+    font-family: 'MuseoSans 100';
+    src: url('Assets/Fonts/MuseoSansRounded-100.otf');
+}
+
+@font-face {
+    font-family: 'MuseoSans 300';
+    src: url('Assets/Fonts/MuseoSansRounded-300.otf');
+}
+
+@font-face {
+    font-family: 'MuseoSans 500';
+    src: url('Assets/Fonts/MuseoSansRounded-500.otf');
+}
+
+@font-face {
+    font-family: 'MuseoSans 700';
+    src: url('Assets/Fonts/MuseoSansRounded-700.otf');
+}
+
+@font-face {
+    font-family: 'MuseoSans 900';
+    src: url('Assets/Fonts/MuseoSansRounded-900.otf');
+}
+
+@font-face {
+    font-family: 'MuseoSans 1000';
+    src: url('Assets/Fonts/MuseoSansRounded-1000.otf');
+}
+
+a, p, h1, h2, h3 {
+    color: #555;
+}
+
+h1 {
+    color: #dc4ba3;
+}
+
+h2 {
+    font-family: 'MuseoSans 500', sans-serif;
+    font-size: 36px;
+}
+
+h3 {
+    font-family: 'MuseoSans 500', sans-serif;
+    line-height: 1.4;
+}
+
+p {
+    font-size: 20px;
+    margin: 0;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+span {
+    color: #b2b2b2;
+    font-size: 16px;
+}
+
+.form-control:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.container {
+    padding: 0;
+}
+
+.section-padding {
+    padding: 50px 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.button {
+    color: #fff;
+    font-family: 'MuseoSans 700', sans-serif;
+    transition: all .3s;
+    border-radius: 4px;
+    line-height: 1;
+    padding-left: 60px !important;
+    background-size: 16px;
+}
+
+.read-more {
+    color: #dc4ba3;
+    font-family: 'MuseoSans 500', sans-serif;
+    transition: all .3s;
+}
+
+.read-more:hover {
+    color: #dc4ba3;
+    opacity: .7;
+    transition: all .3s;
+}
+
+.adapt-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/******* Header Style *******/
+.navbar {
+    padding: 30px 0;
+}
+
+.navbar-brand {
+    padding: 0;
+    line-height: 1;
+}
+
+.navbar-brand img {
+    width: 180px;
+    height: auto;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.navbar-expand-lg .navbar-nav .nav-item {
+    margin-left: 25px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    font-size: .875em;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    transition: all .3s;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover {
+    opacity: .7;
+    transition: all .3s;
+    color: #999;
+}
+
+.navbar-expand-lg .navbar-nav .nav-item.active .nav-link {
+    font-family: 'MuseoSans 700', sans-serif;
+}
+
+.get-app-btn.nav-link {
+    background: #dc4ba3 url(Assets/Icons/ic-apple.svg) no-repeat 30px 16px;
+    text-transform: uppercase;
+}
+
+.login-btn.nav-link {
+    background: #b3b3b3 url(Assets/Icons/ic-unicorn.svg) no-repeat 30px 18px;
+}
+
+.get-app-btn.nav-link:hover {
+    color: #fff !important;
+    background-color: rgba(220,75,163,.7);
+    transition: all .3s;
+}
+
+.login-btn.nav-link:hover {
+    color: #fff !important;
+    background-color: rgba(85,85,85,.7);
+    transition: all .3s;
+}
+
+/******* Footer Style *******/
+footer {
+    padding: 70px 0;
+    background-color: #f4f4f4;
+    border-top: 1px solid #d8d8d8;
+}
+
+footer .container {
+    justify-content: space-between;
+}
+
+footer .logo {
+    width: 175px;
+    margin-bottom: 10px;
+}
+
+footer .left,
+footer .right {
+    flex-direction: column;
+}
+
+footer .right {
+    align-items: flex-end;
+}
+
+footer span {
+    font-size: 18px;
+    line-height: 1.8;
+    font-family: 'MuseoSans 500', sans-serif;
+    color: #909090;
+}
+
+footer .right a {
+    color: #dc4ba3;
+}
+
+/******* Title Section Style *******/
+#search {
+    width: auto;
+    text-align: center;
+    margin: 0 auto;
+    border: 0;
+    background: transparent url(Assets/Icons/ic-search.svg) no-repeat 7px center;
+    background-size: 16px;
+    padding: 15px 0;
+}
+
+/******* Last Blog Section Style *******/
+.last-blog-post .left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tags {
+    padding: 10px 0 15px;
+    margin: 0;
+    list-style-type: none;
+}
+
+.tag {
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.tag a {
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    color: #999999;
+    font-family: 'MuseoSans 700', sans-serif;
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+.post-engagement {
+    padding-top: 40px;
+}
+
+.post-engagement img {
+    margin-right: 10px;
+    height: 12px;
+}
+
+.post-engagement p {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.post-engagement p span {
+    font-family: 'MuseoSans 500', sans-serif;
+}
+
+/******* Other Blog Posts Section Style *******/
+.post-item {
+    padding-bottom: 40px;
+}
+
+.post-item .image {
+    height: 280px;
+}
+
+.post-item .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post-text {
+    padding: 10px 5px;
+}
+
+.post-text .blog-post-excerpt {
+    padding-bottom: 35px;
+}
+
+.load-more-btn {
+    margin: 20px auto 70px;
+    display: inline-block;
+    padding: 15px 80px;
+    background-color: #dc4ba3;
+    font-size: 20px;
+    font-family: 'MuseoSans', sans-serif;
+    color: #fff;
+    transition: all .3s;
+}
+
+.load-more-btn:hover {
+    background-color: rgba(220,75,163,.7);
+    color: #fff;
+    transition: all .3s;
+}
+
+/******* Single Post Page Style *******/
+.hero-section {
+    height: 500px;
+    /* background: transparent url(Assets/Images/img-unicorn-large.png) no-repeat center top;
+    background-size: 100%; */
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-section .hero-overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section h1 {
+    width: 630px;
+    font-family: 'MuseoSans 500', sans-serif;
+}
+
+.back-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    left: 0;
+    text-align: center;
+    transition: all .3s;
+}
+
+.back-btn:hover {
+    color: #dc4ba3;
+    transition: all .3s;
+}
