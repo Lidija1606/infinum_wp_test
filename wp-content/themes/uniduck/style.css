@@ -251,6 +251,11 @@ footer .right a {
     object-fit: cover;
 }
 
+.last-blog-post a:hover h2 {
+    color: #dc4ba3;
+    transition: all .3s;
+}
+
 .tags {
     padding: 10px 0 15px;
     margin: 0;
@@ -293,6 +298,11 @@ footer .right a {
 /******* Other Blog Posts Section Style *******/
 .post-item {
     padding-bottom: 40px;
+}
+
+.post-item a:hover h3 {
+    color: #dc4ba3;
+    transition: all .3s;
 }
 
 .post-item .image {
@@ -349,6 +359,11 @@ footer .right a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.hero-section .container img {
+    width: 100%;
+    height: auto;
 }
 
 .hero-section h1 {
