@@ -21,7 +21,7 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">Home</a>
+                                <a class="nav-link" href="<?php echo home_url('/'); ?>">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link get-app-btn button" href="#">Get for iOS</a>
