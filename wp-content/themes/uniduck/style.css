@@ -392,6 +392,11 @@ footer .right a {
 }
 
 /******* Other Blog Posts Section Style *******/
+.other-blog-posts {
+    display: flex;
+    flex-direction: column;
+}
+
 .post-item {
     padding-bottom: 40px;
 }
@@ -420,6 +425,7 @@ footer .right a {
 }
 
 .load-more-btn {
+    border: 0;
     margin: 20px auto 70px;
     display: inline-block;
     padding: 15px 80px;
@@ -438,7 +444,7 @@ footer .right a {
 
 /******* Single Post Page Style *******/
 .hero-section {
-    height: 500px;
+    max-height: 500px;
     /* background: transparent url(Assets/Images/img-unicorn-large.png) no-repeat center top;
     background-size: 100%; */
     overflow: hidden;
@@ -560,6 +566,16 @@ footer .right a {
     padding-top: 40px;
     display: flex;
     padding: 40px 283px;
+}
+
+.related-post .title {
+    color: #555;
+    text-align: left;
+}
+
+.related-post a:hover .title {
+    color: #dc4ba3;
+    transition: all .3s;
 }
 
 .related-post .post-text {
@@ -773,7 +789,7 @@ footer .right a {
     }    
 
     .hero-section {
-        height: 450px;
+        max-height: 450px;
     }
 
     .blog-post-content p, .blog-post-content h3 {
@@ -808,6 +824,12 @@ footer .right a {
     .related-post .post-item {
         display: flex;
         padding: 20px 0 30px;
+    }
+
+    .load-more-btn {
+        margin: 20px auto 50px;
+        padding: 12px 60px;
+        font-size: 18px;
     }
 }
 
@@ -880,7 +902,7 @@ footer .right a {
     }
 
     .hero-section {
-        height: 380px;
+        max-height: 380px;
     }
     
     .hero-section h1 {
@@ -911,4 +933,16 @@ footer .right a {
         margin-top: 15px;
     }
 
+    .load-more-btn {
+        margin: 20px auto 40px;
+        padding: 10px 45px;
+        font-size: 16px;
+    }
+
+}
+
+@media(max-width:575.98px) {
+    .hero-section {
+        max-height: 300px;
+    }
 }
