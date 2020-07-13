@@ -11,38 +11,33 @@
         <?php echo do_shortcode('[lastest-post]'); ?>
     </section>
 
-    <!-- Other Blog Posts Section -->
+	<!-- Other Blog Posts Section -->
 	<section class="other-blog-posts container section-padding">
-		<div class="row">
-
-        <?php 
-			query_posts('posts_per_page=6&offset=1');
-			if ( have_posts() ) : while ( have_posts() ) : the_post();
+		<?php
+			$args = array(
+				'post_type' => 'post',
+				'post_status' => 'publish',
+				'posts_per_page' => '6',
+				'paged' => 1,
+				'offset' => 1
+			);
+			
+			$blog_posts = new WP_Query( $args );
 		?>
+	
+		<?php if ( $blog_posts->have_posts() ) : ?>
+			<div class="blog-posts row">
+				<?php while ( $blog_posts->have_posts() ) : $blog_posts->the_post(); ?>
+				
+				<!-- Blog Post Item -->
+				<?php get_template_part( 'template-parts/blog-post-item' ); ?>
 
-            <!-- Blog Post Item -->
-			<div class="col-12 col-sm-6 col-lg-4 post-item">
-				<div class="image">
-					<?php the_post_thumbnail(); ?>
-				</div>
-				<div class="post-text">
-					<span class="date"><?php the_time('F j, Y'); ?></span>
-					<a href="<?php the_permalink(); ?>"><h3 class="last-post-title"><?php the_title(); ?></h3></a>
-					<?php the_tags( '<ul class="tags"><li class="tag">', '</li><li class="tag">', '</li></ul>' ); ?>
-					
-					<p><?php echo wpuni_excerpt(32); ?></p>
-					<div class="post-engagement flex">
-						<p class="likes"><img src="<?php bloginfo('template_url'); ?>/Assets/Icons/ic-heart.svg" /><span>17 faves</span></p>
-						<p class="comments"><img src="<?php bloginfo('template_url'); ?>/Assets/Icons/ic-comment.svg" /><span>22 comments</span></p>
-					</div>
-				</div>
+				<?php endwhile; ?>
 			</div>
+			<button class="load-more-btn">Load More</button>
 
-        <?php endwhile; else : ?>
+		<?php else : ?>
             <p><?php esc_html_e( 'Sorry, no pages found.' ); ?></p>
-        <?php endif; ?>
-
-        </div>
-    </section>
+        <?php endif; ?> 
 			
 <?php get_footer(); ?>
